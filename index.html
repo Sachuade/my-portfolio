@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Ade — Python Full-Stack Developer</title>
+  <meta name="description" content="Sachin Ade — Aspiring Data Engineer & Python Full-Stack Developer in Python, SQL, Power BI, Apache Spark,JavaScript, and ETL pipelines. Explore my portfolio, projects, and technical skills." />
+  <meta name="author" content="Sachin Ade" />
+  <meta name="keywords" content="Sachin Ade, Data Engineer, Py, Python, SQL, Power BI, Apache Spark,HTML5, Reactjs, ETL Pipeline, Data Engineering,JavaScript, MySQL, PostgreSQL, Dashboard, Business Intelligence, Portfolio" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content= "Sachin Ade — Data Engineer & Python Full-Stack Developer" />
+  <meta property="og:description" content="Building scalable data solutions and transforming raw data into actionable business insights using Python, SQL, Power BI, Apache Spark, and ETL pipelines." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=630&fit=crop" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content= "Sachin Ade — Data Engineer & Python Full-Stack Developer" />
+  <meta name="twitter:description" content="Designing Digital Experiences That Users Love." />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sachin Ade",
+    "jobTitle": "Python Full-Stack Developer & Data Engineer",
+    "url": "https://sachuade45@gmail.com",
+    "sameAs": ["https://linkedin.com/in/sachinade", "https://github.com/sachuade", "https://dribbble.com/sachu_ade185", "https://behance.net/"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: { DEFAULT: '#2563EB', light: '#3B82F6', dark: '#1D4ED8' },
+            secondary: { DEFAULT: '#38BDF8', light: '#7DD3FC', dark: '#0EA5E9' },
+            accent: { DEFAULT: '#22C55E', light: '#4ADE80', dark: '#16A34A' },
+            surface: '#F8FAFC',
+            ink: { DEFAULT: '#0F172A', light: '#1E293B', muted: '#64748B' },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    /* ============== ROOT VARIABLES ============== */
+    :root {
+      --bg: #FFFFFF;
+      --bg-alt: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --border: rgba(15, 23, 42, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(255, 255, 255, 0.5);
+      --shadow-sm: 0 1px 2px rgba(15,23,42,0.04), 0 1px 3px rgba(15,23,42,0.06);
+      --shadow-md: 0 4px 6px rgba(15,23,42,0.04), 0 10px 15px rgba(15,23,42,0.05), 0 0 0 1px rgba(15,23,42,0.03);
+      --shadow-lg: 0 10px 25px rgba(15,23,42,0.06), 0 20px 48px rgba(15,23,42,0.08), 0 0 0 1px rgba(15,23,42,0.04);
+      --shadow-glow: 0 0 40px rgba(37,99,235,0.15);
+      --gradient-1: linear-gradient(135deg, #2563EB 0%, #38BDF8 50%, #22C55E 100%);
+      --gradient-2: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      --gradient-text: linear-gradient(135deg, #2563EB 0%, #38BDF8 50%, #22C55E 100%);
+      --mesh-1: rgba(37,99,235,0.12);
+      --mesh-2: rgba(56,189,248,0.10);
+      --mesh-3: rgba(34,197,94,0.08);
+      --cursor-color: rgba(37,99,235,0.6);
+    }
+
+    html.dark {
+      --bg: #0B0F1A;
+      --bg-alt: #0F172A;
+      --surface: #141B2D;
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --border: rgba(255,255,255,0.08);
+      --glass-bg: rgba(15,23,42,0.72);
+      --glass-border: rgba(255,255,255,0.08);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.15);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.2), 0 10px 15px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.04);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.2), 0 20px 48px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.04);
+      --shadow-glow: 0 0 50px rgba(37,99,235,0.25);
+      --mesh-1: rgba(37,99,235,0.18);
+      --mesh-2: rgba(56,189,248,0.12);
+      --mesh-3: rgba(34,197,94,0.08);
+      --cursor-color: rgba(56,189,248,0.7);
+    }
+
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    /* ============== SCROLLBAR ============== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--gradient-2); border-radius: 4px; }
+
+    /* ============== SELECTION ============== */
+    ::selection { background: rgba(37,99,235,0.2); color: inherit; }
+
+    /* ============== CUSTOM CURSOR ============== */
+    .cursor-dot, .cursor-glow {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      transition: transform 0.15s ease, opacity 0.3s ease;
+    }
+    .cursor-dot {
+      width: 8px; height: 8px;
+      background: var(--cursor-color);
+      transform: translate(-50%, -50%);
+    }
+    .cursor-glow {
+      width: 40px; height: 40px;
+      background: var(--cursor-color);
+      filter: blur(12px);
+      opacity: 0.5;
+      transform: translate(-50%, -50%);
+      transition: transform 0.25s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    }
+    .cursor-glow.hover { width: 64px; height: 64px; opacity: 0.8; }
+    @media (max-width: 768px) { .cursor-dot, .cursor-glow { display: none; } }
+
+  
+    /* ============== SCROLL PROGRESS ============== */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      width: 0%; z-index: 9000;
+      background: var(--gradient-1);
+      transition: width 0.1s linear;
+    }
+
+    /* ============== ANIMATED MESH BACKGROUND ============== */
+    .mesh-bg {
+      position: absolute; inset: 0; overflow: hidden;
+      z-index: 0; pointer-events: none;
+    }
+    .mesh-blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); opacity: 0.7;
+      animation: float-blob 20s ease-in-out infinite;
+    }
+    .mesh-blob.b1 { width: 500px; height: 500px; background: var(--mesh-1); top: -10%; left: -5%; }
+    .mesh-blob.b2 { width: 400px; height: 400px; background: var(--mesh-2); top: 30%; right: -5%; animation-delay: -5s; }
+    .mesh-blob.b3 { width: 350px; height: 350px; background: var(--mesh-3); bottom: -10%; left: 30%; animation-delay: -10s; }
+    @keyframes float-blob {
+      0%,100% { transform: translate(0,0) scale(1); }
+      33% { transform: translate(40px,-30px) scale(1.05); }
+      66% { transform: translate(-30px,20px) scale(0.95); }
+    }
+
+    /* ============== GLASS ============== */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid var(--glass-border);
+    }
+    html.dark .glass { border-color: var(--border); }
+
+    /* ============== GRADIENT TEXT ============== */
+    .gradient-text {
+      background: var(--gradient-text);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ============== CARD ============== */
+    .card-premium {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, border-color 0.3s ease;
+    }
+    .card-premium:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(37,99,235,0.2);
+    }
+
+    /* ============== BUTTONS ============== */
+    .btn-primary {
+      background: var(--gradient-2);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.25);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
+    .btn-ghost {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+    .btn-ghost:hover { transform: translateY(-2px); border-color: rgba(37,99,235,0.3); background: var(--bg-alt); }
+
+    /* ============== MAGNETIC ============== */
+    .magnetic { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+
+    /* ============== SCROLL ANIMATIONS ============== */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    .reveal-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-scale.in { opacity: 1; transform: scale(1); }
+
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left.in { opacity: 1; transform: translateX(0); }
+
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right.in { opacity: 1; transform: translateX(0); }
+
+    /* ============== NAVBAR ============== */
+    .navbar { transition: background 0.4s, box-shadow 0.4s, padding 0.3s; }
+    .navbar.scrolled { box-shadow: var(--shadow-md); }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px; background: var(--gradient-2);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ============== HERO ============== */
+    .hero-title {
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      line-height: 1.05; letter-spacing: -0.03em; font-weight: 800;
+    }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.6; }
+
+    .float-card {
+      animation: float-card 6s ease-in-out infinite;
+    }
+    .float-card.delay-1 { animation-delay: -2s; }
+    .float-card.delay-2 { animation-delay: -4s; }
+    @keyframes float-card {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(2deg); }
+    }
+
+    .portrait-ring {
+      position: relative;
+    }
+    .portrait-ring::before {
+      content: ''; position: absolute; inset: -8px;
+      border-radius: 50%;
+      background: var(--gradient-1);
+      z-index: -1; opacity: 0.3;
+      animation: pulse-ring 4s ease-in-out infinite;
+    }
+    @keyframes pulse-ring {
+      0%,100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.05); opacity: 0.15; }
+    }
+
+    /* ============== STATS ============== */
+    .stat-num {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800; line-height: 1;
+      background: var(--gradient-text);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ============== TIMELINE ============== */
+    .timeline-line {
+      position: absolute; left: 50%; top: 0; bottom: 0;
+      width: 2px; background: var(--border);
+      transform: translateX(-50%);
+    }
+    .timeline-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--gradient-2);
+      box-shadow: 0 0 0 4px var(--bg), 0 0 12px rgba(37,99,235,0.3);
+      position: absolute; left: 50%; top: 24px;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 768px) {
+      .timeline-line { left: 20px; }
+      .timeline-dot { left: 20px; }
+    }
+
+    /* ============== SKILLS ============== */
+    .skill-chip {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 1rem; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--border);
+      font-size: 0.875rem; font-weight: 500; color: var(--text);
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+    .skill-chip:hover {
+      transform: translateY(-3px) scale(1.05);
+      border-color: rgba(37,99,235,0.3);
+      box-shadow: var(--shadow-md);
+    }
+    .skill-chip i { width: 16px; height: 16px; color: #2563EB; }
+
+    .skill-bar-track {
+      width: 100%; height: 8px; border-radius: 4px;
+      background: var(--border); overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%; border-radius: 4px;
+      background: var(--gradient-2);
+      width: 0%; transition: width 1.2s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    /* ============== PROJECT CARDS ============== */
+    .project-card {
+      overflow: hidden;
+      position: relative;
+    }
+    .project-thumb {
+      position: relative; overflow: hidden;
+      border-radius: 1rem;
+    }
+    .project-thumb img {
+      transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+    }
+    .project-card:hover .project-thumb img {
+      transform: scale(1.08);
+    }
+    .project-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(15,23,42,0.7) 100%);
+      display: flex; align-items: flex-end; padding: 1.25rem;
+      opacity: 0; transition: opacity 0.4s ease;
+    }
+    .project-card:hover .project-overlay { opacity: 1; }
+
+    .tag {
+      display: inline-block; padding: 0.25rem 0.75rem;
+      border-radius: 999px; font-size: 0.75rem; font-weight: 500;
+      background: var(--bg-alt); border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    /* ============== TESTIMONIALS ============== */
+    .testimonial-track {
+      display: flex; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .testimonial-card {
+      min-width: 100%; padding: 0 1rem;
+    }
+    @media (min-width: 768px) {
+      .testimonial-card { min-width: 50%; }
+    }
+
+    /* ============== ACCORDION ============== */
+    .accordion-body {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .accordion-item.open .accordion-body {
+      max-height: 500px; padding-top: 1rem;
+    }
+    .accordion-item.open .accordion-icon { transform: rotate(180deg); }
+    .accordion-icon { transition: transform 0.3s ease; }
+
+    /* ============== TABS ============== */
+    .tab-btn { transition: color 0.3s, border-color 0.3s; }
+    .tab-btn.active {
+      color: #2563EB; border-color: #2563EB;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ============== FORM ============== */
+    .form-input {
+      width: 100%; padding: 0.875rem 1.125rem;
+      border-radius: 0.75rem;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); font-size: 0.95rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: #2563EB;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+    }
+    .form-input::placeholder { color: var(--text-muted); }
+
+    /* ============== MISC ============== */
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800; letter-spacing: -0.02em; line-height: 1.1;
+    }
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.375rem 1rem; border-radius: 999px;
+      font-size: 0.8125rem; font-weight: 600;
+      background: var(--bg-alt); border: 1px solid var(--border);
+      color: #2563EB; text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .section-eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gradient-2); }
+
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .back-to-top {
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+    .back-to-top.show { opacity: 1; visibility: visible; }
+    .back-to-top:hover { transform: translateY(-4px); }
+
+    /* Marquee */
+    .marquee { display: flex; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+    .marquee-track { display: flex; gap: 3rem; animation: marquee 25s linear infinite; flex-shrink: 0; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* Case study modal */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 8000;
+      background: rgba(15,23,42,0.6); backdrop-filter: blur(8px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 2rem 1rem; overflow-y: auto;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .modal-overlay.open { opacity: 1; visibility: visible; }
+    .modal-content {
+      max-width: 800px; width: 100%;
+      background: var(--bg); border-radius: 1.5rem;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(20px); transition: transform 0.4s ease;
+      margin-bottom: 2rem;
+    }
+    .modal-overlay.open .modal-content { transform: translateY(0); }
+
+    /* Theme toggle */
+    .theme-toggle {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); background: var(--surface);
+      cursor: pointer; transition: border-color 0.3s, transform 0.3s;
+    }
+    .theme-toggle:hover { border-color: rgba(37,99,235,0.3); transform: scale(1.05); }
+    .theme-toggle svg { width: 20px; height: 20px; }
+
+    /* Process steps */
+    .process-step::before {
+      content: attr(data-step);
+      position: absolute; top: -12px; left: -12px;
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.875rem;
+      background: var(--gradient-2); color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!-- ============== CUSTOM CURSOR ============== -->
+  <!-- <div class="cursor-dot" id="cursorDot"></div> -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============== SCROLL PROGRESS ============== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============== NAVBAR ============== -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-[7000] px-4 sm:px-6 py-3" id="navbar">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg" style="background: var(--gradient-2);">S</div>
+        <span class="font-display font-bold text-lg tracking-tight" style="color: var(--text)">Sachin.A<span style="color:#2563EB"></span></span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-1 glass rounded-2xl px-2 py-1.5" style="box-shadow: var(--shadow-sm)">
+        <a href="#hero" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Home</a>
+        <a href="#about" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">About</a>
+        <a href="#skills" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Skills</a>
+        <a href="#services" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Services</a>
+        <a href="#projects" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Projects</a>
+        <a href="#process" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Process</a>
+        <a href="#experience" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Experience</a>
+        <a href="#contact" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text)"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text); display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a href="#contact" class="hidden sm:inline-flex btn-primary magnetic rounded-xl px-5 py-2.5 text-sm font-semibold items-center gap-2">
+          Let's Talk <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+        <button class="lg:hidden theme-toggle" id="menuToggle" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text)"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="lg:hidden hidden mt-3 glass rounded-2xl p-4" id="mobileMenu" style="box-shadow: var(--shadow-md)">
+      <div class="flex flex-col gap-1">
+        <a href="#hero" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Home</a>
+        <a href="#about" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">About</a>
+        <a href="#skills" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Skills</a>
+        <a href="#services" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Services</a>
+        <a href="#projects" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Projects</a>
+        <a href="#process" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Design Process</a>
+        <a href="#experience" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Experience</a>
+        <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--bg-alt)] transition-colors" style="color: var(--text-muted)">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============== HERO ============== -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-16 px-4 sm:px-6 overflow-hidden">
+    <div class="mesh-bg">
+      <div class="mesh-blob b1"></div>
+      <div class="mesh-blob b2"></div>
+      <div class="mesh-blob b3"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-8">
+        <div class="reveal flex items-center gap-3">
+          <span class="section-eyebrow"><span class="dot"></span> Available for opportunities</span>
+        </div>
+
+        <h1 class="hero-title font-display reveal reveal-delay-1" style="color: var(--text)">
+          Building Scalable Web Applications & Data Pipelines<br>
+<br>
+          <span class="gradient-text">Users Love.</span>
+        </h1>
+
+        <p class="hero-sub reveal reveal-delay-2 max-w-xl" style="color: var(--text-muted)">
+          Aspiring Python Full Stack Developer and Data Engineer focused on building scalable web applications, REST APIs, and reliable data pipelines. Skilled in Python, Flask, SQL, and modern frontend technologies, with an interest in developing data-driven solutions and transforming raw data into actionable insights.
+        </p>
+
+        <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
+          <a href="#projects" class="btn-primary magnetic rounded-xl px-6 py-3.5 text-sm font-semibold inline-flex items-center gap-2">
+            View My Work <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#resume" class="btn-ghost magnetic rounded-xl px-6 py-3.5 text-sm font-semibold inline-flex items-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn-ghost magnetic rounded-xl px-6 py-3.5 text-sm font-semibold inline-flex items-center gap-2">
+            Contact Me <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="reveal reveal-delay-4 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t" style="border-color: var(--border)">
+          <div>
+            <div class="stat-num" data-target="15">0</div>
+            <p class="text-sm mt-1" style="color: var(--text-muted)">Projects Completed</p>
+          </div>
+          <div>
+            <div class="stat-num" data-target="8">0</div>
+            <p class="text-sm mt-1" style="color: var(--text-muted)">Happy Clients</p>
+          </div>
+          <div>
+            <div class="stat-num" data-target="6">0</div>
+            <p class="text-sm mt-1" style="color: var(--text-muted)">Case Studies</p>
+          </div>
+          <div>
+            <div class="stat-num" data-target="3">0</div>
+            <p class="text-sm mt-1" style="color: var(--text-muted)">Years Learning</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex justify-center reveal-scale">
+        <div class="relative">
+          <div class="portrait-ring w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden" style="box-shadow: var(--shadow-lg)">
+            <img src=3.png.jpeg alt="Sachin Ade" class="w-full h-full object-cover" />
+          </div>
+          <!-- Floating cards -->
+          <div class="float-card absolute -top-4 -left-8 glass rounded-2xl px-4 py-3 flex items-center gap-3" style="box-shadow: var(--shadow-lg)">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(37,99,235,0.1)">
+              <i data-lucide="Power BI" class="w-5 h-5" style="color:#2563EB"></i>
+            </div>
+            <div>
+              <p class="text-xs font-semibold" style="color: var(--text)">Reactjs</p>
+              <p class="text-[10px]" style="color: var(--text-muted)">Interactive & Responsive Dashboards</p>
+            </div>
+          </div>
+          <div class="float-card delay-1 absolute -bottom-4 -right-4 glass rounded-2xl px-4 py-3 flex items-center gap-3" style="box-shadow: var(--shadow-lg)">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(34,197,94,0.1)">
+              <i data-lucide="zap" class="w-5 h-5" style="color:#22C55E"></i>
+            </div>
+            <div>
+              <p class="text-xs font-semibold" style="color: var(--text)">Apache Spark</p>
+              <p class="text-[10px]" style="color: var(--text-muted)">Big Data Processing</p>
+            </div>
+          </div>
+          <div class="float-card delay-2 absolute top-1/2 -right-10 glass rounded-2xl px-4 py-3 flex items-center gap-3 hidden sm:flex" style="box-shadow: var(--shadow-lg)">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(56,189,248,0.1)">
+              <i data-lucide="palette" class="w-5 h-5" style="color:#38BDF8"></i>
+            </div>
+            <div>
+              <p class="text-xs font-semibold" style="color: var(--text)">Advanced SQL</p>
+              <p class="text-[10px]" style="color: var(--text-muted)">Query Optimization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <span class="text-xs font-medium" style="color: var(--text-muted)">Scroll</span>
+      <div class="w-px h-12 relative overflow-hidden" style="background: var(--border)">
+        <div class="absolute top-0 left-0 w-full h-1/2" style="background: var(--gradient-2); animation: scrollDown 2s ease-in-out infinite;"></div>
+      </div>
+    </div>
+    <style>@keyframes scrollDown { 0% { transform: translateY(-100%); } 100% { transform: translateY(200%); } }</style>
+  </section>
+
+  <!-- ============== MARQUEE ============== -->
+  <div class="py-8 border-y" style="border-color: var(--border); background: var(--bg-alt)">
+    <div class="marquee">
+      <div class="marquee-track">
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">SQL</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Python</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Flask</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Excel</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">ReactJS</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">HTML5</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">REST API</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Data Modeling</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Data Pipelines</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Dashboard Development</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">JavaScript</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">MySQL</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">ETL</span>
+<span class="text-2xl font-bold opacity-40" style="color: var(--text)">Git & GitHub<</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== ABOUT ============== -->
+  <section id="about" class="py-24 px-4 sm:px-6 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <span class="section-eyebrow reveal"><span class="dot"></span> About Me</span>
+        <h2 class="section-title font-display reveal reveal-delay-1" style="color: var(--text)">The journey of a<br><span class="gradient-text">Python Developer & Data Engineer</span></h2>
+        <p class="reveal reveal-delay-2 max-w-2xl mx-auto text-lg" style="color: var(--text-muted)">
+ Aspiring Python Full Stack Developer & Data Engineer passionate about
+    building scalable web applications, REST APIs, and reliable data pipelines.
+    Skilled in Python, Flask, ReactJS, SQL, MySQL, ETL, Apache Spark, and
+    Power BI, with a focus on developing data-driven solutions and transforming
+    data into actionable insights.
+        </p>
+      </div>
+
+      <!-- Bio -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div class="reveal-left space-y-6">
+          <p class="text-lg leading-relaxed" style="color: var(--text)">
+            I'm <strong>Sachin Ade</strong>,A Python Full Stack Developer & aspiring Data Engineer currently pursuing my MCA. <strong>Master of Computer Applications (MCA)</strong>. My journey is driven by a passion for transforming raw data into meaningful insights. I build scalable ETL pipelines, optimize data workflows, and continuously learn modern data engineering technologies.
+          </p>
+          <p class="text-lg leading-relaxed" style="color: var(--text-muted)">
+            From wireframes to high-fidelity prototypes, from user research to frontend implementation, I bring a holistic perspective to every product I touch. My goal is to create products that are simple, accessible, beautiful, and impactful.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-4">
+            <span class="tag" style="color:#2563EB; border-color:rgba(37,99,235,0.2)">MCA Student</span>
+            <span class="tag" style="color:#2563EB; border-color:rgba(37,99,235,0.2)">Frontend Developer</span>
+            <span class="tag" style="color:#2563EB; border-color:rgba(37,99,235,0.2)">Data Engineer</span>
+            <span class="tag" style="color:#2563EB; border-color:rgba(37,99,235,0.2)">Backend Developer</span>
+          </div>
+        </div>
+
+        <div class="reveal-right grid grid-cols-2 gap-4">
+          <div class="card-premium p-6 text-center">
+            <div class="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4" style="background: rgba(37,99,235,0.1)"><i data-lucide="puzzle" class="w-7 h-7" style="color:#2563EB"></i></div>
+            <h3 class="font-bold text-lg mb-1" style="color: var(--text)">Problem Solver</h3>
+            <p class="text-sm" style="color: var(--text-muted)">Breaking complex problems into simple solutions</p>
+          </div>
+          <div class="card-premium p-6 text-center" style="margin-top: 1.5rem">
+            <div class="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4" style="background: rgba(56,189,248,0.1)"><i data-lucide="lightbulb" class="w-7 h-7" style="color:#38BDF8"></i></div>
+            <h3 class="font-bold text-lg mb-1" style="color: var(--text)">Insight Creator</h3>
+            <p class="text-sm" style="color: var(--text-muted)">Transforming raw data into meaningful business insights.</p>
+          </div>
+          <div class="card-premium p-6 text-center" style="margin-top: -1.5rem">
+            <div class="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4" style="background: rgba(34,197,94,0.1)"><i data-lucide="rocket" class="w-7 h-7" style="color:#22C55E"></i></div>
+            <h3 class="font-bold text-lg mb-1" style="color: var(--text)">Fast Learner</h3>
+            <p class="text-sm" style="color: var(--text-muted)">Adapting quickly to new tools & trends</p>
+          </div>
+          <div class="card-premium p-6 text-center">
+            <div class="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4" style="background: rgba(37,99,235,0.1)"><i data-lucide="search" class="w-7 h-7" style="color:#2563EB"></i></div>
+            <h3 class="font-bold text-lg mb-1" style="color: var(--text)">Research Driven</h3>
+            <p class="text-sm" style="color: var(--text-muted)">Every decision backed by data</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="text-center mb-12">
+        <h3 class="text-2xl font-bold font-display reveal" style="color: var(--text)">My Journey</h3>
+      </div>
+
+      <div class="relative w-full max-w-6xl mx-auto px-6">
+        <div class="timeline-line"></div>
+
+        <div class="space-y-12">
+          <div class="timeline-item reveal flex flex-col md:flex-row gap-6 items-start md:items-center">
+            <div class="timeline-dot"></div>
+            <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+              <span class="text-sm font-semibold" style="color:#2563EB">2025 — Present</span>
+              <h4 class="text-lg font-bold mt-1" style="color: var(--text)">Master of Computer Applications (MCA)</h4>
+              <p class="text-sm mt-2" style="color: var(--text-muted)">Advancing my knowledge in Data Engineering by learning big data processing, cloud platforms, ETL development, workflow automation, and scalable data pipeline design.</p>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+
+          <div class="timeline-item reveal flex flex-col md:flex-row-reverse gap-6 items-start md:items-center">
+            <div class="timeline-dot"></div>
+            <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+              <span class="text-sm font-semibold" style="color:#2563EB">2024</span>
+              <h4 class="text-lg font-bold mt-1" style="color: var(--text)">Data Engineer & Python Developer</h4>
+              <p class="text-sm mt-2" style="color: var(--text-muted)">Discovered a passion for data engineering by learning Python, SQL, and database management. Started building ETL pipelines, working with large datasets, and exploring Apache Spark and cloud technologies.</p>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+
+           <div class="timeline-item reveal flex flex-col md:flex-row gap-6 items-start md:items-center">
+            <div class="timeline-dot"></div>
+            <div class="md:w-1/2 md:pl-12 pl-12">
+              <span class="text-sm font-semibold" style="color:#2563EB">2023</span>
+              <h4 class="text-lg font-bold mt-1" style="color: var(--text)">Frontend Developer</h4>
+              <p class="text-sm mt-2" style="color: var(--text-muted)">Built responsive, accessible web applications using React, TypeScript, and Tailwind CSS. Translated design systems into production code.</p>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+
+          <div class="timeline-item reveal flex flex-col md:flex-row-reverse gap-6 items-start md:items-center">
+            <div class="timeline-dot"></div>
+            <div class="md:w-1/2 md:pl-12 pl-12">
+              <span class="text-sm font-semibold" style="color:#2563EB">2022</span>
+              <h4 class="text-lg font-bold mt-1" style="color: var(--text)">Passionate Product Thinker</h4>
+              <p class="text-sm mt-2" style="color: var(--text-muted)">Began exploring how design decisions impact business outcomes. Fell in love with the intersection of user needs, technology, and business strategy.</p>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SKILLS ============== -->
+  <section id="skills" class="py-24 px-4 sm:px-6" style="background: var(--bg-alt)">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <span class="section-eyebrow reveal"><span class="dot"></span> Skills & Expertise</span>
+        <h2 class="section-title font-display reveal reveal-delay-1" style="color: var(--text)">A toolkit for<br><span class="gradient-text">End-to-End Solutions</span></h2>
+      </div>
+
+      <!-- Skill categories with tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12 reveal">
+     
+        <button class="tab-btn active px-5 py-2.5 rounded-xl text-sm font-semibold border-2" data-tab="ux" style="border-color: var(--border); color: var(--text)">Python Full-Stack & Data Engineer</button>
+        <button class="tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2" data-tab="frontend" style="border-color: var(--border); color: var(--text-muted)">Frontend</button>
+        <button class="tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2" data-tab="tools" style="border-color: var(--border); color: var(--text-muted)">Tools & AI</button>
+      </div>
+
+      <!-- Data Engineer   -->
+      <div class="tab-panel active" data-panel="ux">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-5">
+            <div class="reveal reveal-delay-1">
+    
+</div>
+            <div class="reveal">
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)"> Python & Data Engineer</span><span class="text-sm" style="color: var(--text-muted)">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="reveal reveal-delay-1">
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">User Interviews</span><span class="text-sm" style="color: var(--text-muted)">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="reveal reveal-delay-2">
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Competitive Analysis</span><span class="text-sm" style="color: var(--text-muted)">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="reveal reveal-delay-3">
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">User Journey Mapping</span><span class="text-sm" style="color: var(--text-muted)">87%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3 items-start content-start">
+              <span class="skill-chip reveal"><i data-lucide="database"></i> SQL</span>
+              <span class="skill-chip reveal"><i data-lucide="code"></i> Python</span>
+              <span class="skill-chip reveal"><i data-lucide="server"></i> MySQL</span>
+              <span class="skill-chip reveal"><i data-lucide="git-branch"></i> ETL Pipelines</span>
+              <span class="skill-chip reveal"><i data-lucide="workflow"></i> Flask </span>
+              <span class="skill-chip reveal"><i data-lucide="cpu"></i> Apache Spark</span>
+              <span class="skill-chip reveal"><i data-lucide="warehouse"></i>  ReactJS</span>
+              <span class="skill-chip reveal"><i data-lucide="layers"></i>  JavaScript</span>
+              <span class="skill-chip reveal"><i data-lucide="bar-chart-3"></i> Data Modeling</span>
+              <span class="skill-chip reveal"><i data-lucide="table"></i> PostgreSQL</span>
+              <span class="skill-chip reveal"><i data-lucide="github"></i> Git & GitHub</span>
+              <span class="skill-chip reveal"><i data-lucide="network"></i>REST APIs</span>
+              <span class="skill-chip reveal"><i data-lucide="shield-check"></i> Data Quality</span>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="tab-panel" data-panel="design">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">High Fidelity UI</span><span class="text-sm" style="color: var(--text-muted)">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Prototyping</span><span class="text-sm" style="color: var(--text-muted)">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Design Systems</span><span class="text-sm" style="color: var(--text-muted)">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Interaction Design</span><span class="text-sm" style="color: var(--text-muted)">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="tab-panel" data-panel="frontend">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">HTML & CSS</span><span class="text-sm" style="color: var(--text-muted)">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">JavaScript</span><span class="text-sm" style="color: var(--text-muted)">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Tailwind CSS</span><span class="text-sm" style="color: var(--text-muted)">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Bootstrap</span><span class="text-sm" style="color: var(--text-muted)">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3 items-start content-start">
+            <span class="skill-chip"><i data-lucide="code-2"></i> HTML5</span>
+            <span class="skill-chip"><i data-lucide="hash"></i> CSS3</span>
+            <span class="skill-chip"><i data-lucide="braces"></i> JavaScript</span>
+            <span class="skill-chip"><i data-lucide="wind"></i> Tailwind CSS</span>
+            <span class="skill-chip"><i data-lucide="layers"></i> Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & AI -->
+      <div class="tab-panel" data-panel="tools">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Apache Airflow</span><span class="text-sm" style="color: var(--text-muted)">95%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">Power BI</span><span class="text-sm" style="color: var(--text-muted)">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="font-semibold text-sm" style="color: var(--text)">AI Design Tools</span><span class="text-sm" style="color: var(--text-muted)">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3 items-start content-start">
+            <span class="skill-chip"><i data-lucide="workflow"></i> Apache Airflow</span>
+            <span class="skill-chip"><i data-lucide="cpu"></i> Apache Spark</span>
+            <span class="skill-chip"><i data-lucide="layers"></i> Snowflake</span>
+            <span class="skill-chip"><i data-lucide="cloud"></i> AWS</span>
+            <span class="skill-chip"><i data-lucide="bar-chart-3"></i> Git & GitHub</span>
+            <span class="skill-chip"><i data-lucide="table"></i> Excel</span>
+            <span class="skill-chip"><i data-lucide="brain"></i> ChatGPT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERVICES ============== -->
+  <section id="services" class="py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <span class="section-eyebrow reveal"><span class="dot"></span> What I Do</span>
+        <h2 class="section-title font-display reveal reveal-delay-1" style="color: var(--text)">Services I offer</h2>
+        <p class="reveal reveal-delay-2 max-w-2xl mx-auto text-lg" style="color: var(--text-muted)">
+          From research to implementation, I help teams and individuals create products that users love.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-premium p-8 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(37,99,235,0.1)"><i data-lucide="layout-dashboard" class="w-7 h-7" style="color:#2563EB"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Power BI Dashboard Development</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Build interactive Power BI dashboards that transform data into clear, actionable business insights..</p>
+        </div>
+        <div class="card-premium p-8 reveal reveal-delay-1">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(56,189,248,0.1)"><i data-lucide="search" class="w-7 h-7" style="color:#38BDF8"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Database Design & Optimization</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Design and optimize databases to ensure efficient data storage, fast query performance, and reliable data management.</p>
+        </div>
+        <div class="card-premium p-8 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(37,99,235,0.1)"><i data-lucide="globe" class="w-7 h-7" style="color:#2563EB"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Website Design</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Responsive, accessible websites that load fast and convert visitors into customers.</p>
+        </div>
+        <div class="card-premium p-8 reveal reveal-delay-2">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(34,197,94,0.1)"><i data-lucide="bar-chart-3" class="w-7 h-7" style="color:#22C55E"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Dashboard Design</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Data-dense dashboards that make complex information easy to understand and act upon.</p>
+        </div>
+        <div class="card-premium p-8 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(37,99,235,0.1)"><i data-lucide="boxes" class="w-7 h-7" style="color:#2563EB"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Design Systems</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Scalable design systems with reusable components, tokens, and documentation for teams.</p>
+        </div>
+        <div class="card-premium p-8 reveal reveal-delay-1">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(56,189,248,0.1)"><i data-lucide="code-2" class="w-7 h-7" style="color:#38BDF8"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Frontend Development</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Turning designs into pixel-perfect, responsive code with React, TypeScript, and Tailwind CSS.</p>
+        </div>
+        <div class="card-premium p-8 reveal reveal-delay-2">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: rgba(34,197,94,0.1)"><i data-lucide="refresh-cw" class="w-7 h-7" style="color:#22C55E"></i></div>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--text)">Website Redesign</h3>
+          <p class="text-sm" style="color: var(--text-muted)">Transforming outdated websites into modern, high-converting experiences with a fresh design language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PROJECTS ============== -->
+  <section id="projects" class="py-24 px-4 sm:px-6" style="background: var(--bg-alt)">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <span class="section-eyebrow reveal"><span class="dot"></span> Featured Work</span>
+        <h2 class="section-title font-display reveal reveal-delay-1" style="color: var(--text)">Selected projects</h2>
+        <p class="reveal reveal-delay-2 max-w-2xl mx-auto text-lg" style="color: var(--text-muted)">
+          A collection of projects that showcase my process — from research and wireframes to high-fidelity design and frontend implementation.
+        </p>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12 reveal">
+        <button class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all" data-filter="all" style="border-color: #2563EB; color: #2563EB; background: rgba(37,99,235,0.05)">All</button>
+        <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all" data-filter="mobile" style="border-color: var(--border); color: var(--text-muted)">Mobile Apps</button>
+        <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all" data-filter="web" style="border-color: var(--border); color: var(--text-muted)">Web</button>
+        <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all" data-filter="dashboard" style="border-color: var(--border); color: var(--text-muted)">Dashboards</button>
+      </div>
+
+      <!-- Project grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectGrid">
+        <!-- Projects will be rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ============== EXPERIENCE ============== -->
+  <section id="experience" class="py-24 px-4 sm:px-6" style="background: var(--bg-alt)">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <span class="section-eyebrow reveal"><span class="dot"></span> Career</span>
+        <h2 class="section-title font-display reveal reveal-delay-1" style="color: var(--text)">Experience</h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="card-premium p-8 reveal flex flex-col md:flex-row gap-6 items-start">
+          <div class="md:w-1/4">
+            <span class="text-sm font-semibold" style="color:#2563EB">2024 — Present</span>
+            <p class="text-xs mt-1" style="color: var(--text-muted)">Freelance</p>
+          </div>
+          <div class="md:w-3/4">
+            <h3 class="text-lg font-bold" style="color: var(--text)">Aspiring Data Engineer | Python Full Stack Developer</h3>
+            <p class="text-sm mt-2" style="color: var(--text-muted)"> Passionate about building ETL pipelines, analyzing data, and creating interactive dashboards. Experienced with Python, SQL, Power BI, Apache Spark, Snowflake, and Apache Airflow through academic and personal projects, focusing on transforming raw data into meaningful business insights.</p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span class="tag">python</span><span class="tag">ReactJS</span><span class="tag">Frontend</span><span class="tag">Apache Spark</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CERTIFICATES & ACHIEVEMENTS ============== -->
+  <section id="certificates" class="py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Certificates -->
+        <div>
+          <div class="mb-10 space-y-3">
+            <span class="section-eyebrow reveal"><span class="dot"></span> Credentials</span>
+            <h2 class="text-3xl font-bold font-display reveal reveal-delay-1" style="color: var(--text)">Certificates</h2>
+          </div>
+          <div class="space-y-4">
+            <div class="card-premium p-6 reveal flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(37,99,235,0.1)"><i data-lucide="award" class="w-7 h-7" style="color:#2563EB"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">Microsoft Power BI</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Data visualization, DAX, Power Query, and dashboard development.</p>
+              </div>
+            </div>
+            <div class="card-premium p-6 reveal reveal-delay-1 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(56,189,248,0.1)"><i data-lucide="graduation-cap" class="w-7 h-7" style="color:#38BDF8"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">SQL & Database Management</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Advanced SQL queries, database design, indexing, and optimization.</p>
+              </div>
+            </div>
+            <div class="card-premium p-6 reveal reveal-delay-2 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.1)"><i data-lucide="monitor" class="w-7 h-7" style="color:#22C55E"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">Web Development Bootcamp</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Udemy — HTML, CSS, JavaScript, React & responsive design</p>
+              </div>
+            </div>
+            <div class="card-premium p-6 reveal reveal-delay-3 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(37,99,235,0.1)"><i data-lucide="zap" class="w-7 h-7" style="color:#2563EB"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">Apache Spark Fundamentals </h3>
+                <p class="text-sm" style="color: var(--text-muted)">Distributed data processing using PySpark and Spark SQL.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div>
+          <div class="mb-10 space-y-3">
+            <span class="section-eyebrow reveal"><span class="dot"></span> Recognition</span>
+            <h2 class="text-3xl font-bold font-display reveal reveal-delay-1" style="color: var(--text)">Achievements</h2>
+          </div>
+          <div class="space-y-4">
+            <div class="card-premium p-6 reveal flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(37,99,235,0.1)"><i data-lucide="trophy" class="w-7 h-7" style="color:#2563EB"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">Database Design</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Designed normalized relational databases and optimized SQL queries for improved performance.</p>
+              </div>
+            </div>
+            <div class="card-premium p-6 reveal reveal-delay-1 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(56,189,248,0.1)"><i data-lucide="star" class="w-7 h-7" style="color:#38BDF8"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">ETL Pipeline Development</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Designed and implemented end-to-end ETL pipelines using Python and SQL for efficient data processing.</p>
+              </div>
+            </div>
+            <div class="card-premium p-6 reveal reveal-delay-2 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.1)"><i data-lucide="github" class="w-7 h-7" style="color:#22C55E"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">Full-Stack Web Application Development</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Developed responsive web applications using Python, Flask, HTML, CSS, JavaScript,
+    and MySQL, with REST APIs for seamless frontend and backend integration.</p>
+              </div>
+            </div>
+            <div class="card-premium p-6 reveal reveal-delay-3 flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(37,99,235,0.1)"><i data-lucide="medal" class="w-7 h-7" style="color:#2563EB"></i></div>
+              <div>
+                <h3 class="font-bold" style="color: var(--text)">Daily Advanced SQL Challenges — 100 Days</h3>
+                <p class="text-sm" style="color: var(--text-muted)">Completed 100 <h3 class="font-bold" style="color: var(--text)"></h3>
+                <p class="text-sm" style="color: var(--text-muted)">Applied joins, window functions, CTEs, and query optimization to analyze and manage data efficiently Challenges</p>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ============== RESUME ============== -->
+  <section id="resume" class="py-24 px-4 sm:px-6" style="background: var(--bg-alt)">
+    <div class="max-w-5xl mx-auto">
+      <div class="card-premium p-8 sm:p-12 reveal">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+         <div>
+    <span class="section-eyebrow"><span class="dot"></span> Resume</span>
+    <h2 class="text-3xl font-bold font-display mt-4 mb-3" style="color: var(--text)">
+        Download my resume
+    </h2>
+
+    <p class="text-lg mb-6" style="color: var(--text-muted)">
+        Get a detailed overview of my experience, skills, and projects in PDF format.
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+
+        <!-- Download Button -->
+        <a href="assets/resume/Resume.pdf"
+           download
+           class="btn-primary magnetic rounded-xl px-6 py-3.5 text-sm font-semibold inline-flex items-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            Download PDF
+        </a>
+
+        <!-- Preview Button -->
+        <a href="assets/resume/pythonres.pdf.pdf"
+           target="_blank"
+           class="btn-ghost magnetic rounded-xl px-6 py-3.5 text-sm font-semibold inline-flex items-center gap-2">
+            <i data-lucide="eye" class="w-4 h-4"></i>
+            Preview
+        </a>
+
+    </div>
+</div>
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="w-40 h-52 rounded-2xl flex items-center justify-center" style="background: var(--gradient-2); box-shadow: var(--shadow-lg);">
+                <i data-lucide="file-text" class="w-20 h-20 text-white opacity-90"></i>
+              </div>
+              <div class="float-card absolute -top-3 -right-3 glass rounded-xl px-3 py-2 text-xs font-semibold" style="color: var(--text)">PDF</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section id="contact" class="py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <span class="section-eyebrow reveal"><span class="dot"></span> Get in Touch</span>
+        <h2 class="section-title font-display reveal reveal-delay-1" style="color: var(--text)">Let's create something<br><span class="gradient-text">extraordinary together</span></h2>
+        <p class="reveal reveal-delay-2 max-w-2xl mx-auto text-lg" style="color: var(--text-muted)">
+          I'm currently open to Python Full Stack Developer and Data Engineering opportunities. Let's build scalable, data-driven solutions together!
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact info -->
+        <div class="space-y-6 reveal-left">
+          <div class="card-premium p-6 flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(37,99,235,0.1)"><i data-lucide="mail" class="w-7 h-7" style="color:#2563EB"></i></div>
+            <div>
+              <p class="text-sm" style="color: var(--text-muted)">Email</p>
+              <a href="mailto:sachuade45@gmail.com" class="font-semibold" style="color: var(--text)">sachuade45@gmail.com</a>
+            </div>
+          </div>
+          <div class="card-premium p-6 flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(56,189,248,0.1)"><i data-lucide="phone" class="w-7 h-7" style="color:#38BDF8"></i></div>
+            <div>
+              <p class="text-sm" style="color: var(--text-muted)">Phone</p>
+              <a href="tel:+919309361205" class="font-semibold" style="color: var(--text)">+91 9309361205</a>
+            </div>
+          </div>
+          <div class="card-premium p-6 flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.1)"><i data-lucide="map-pin" class="w-7 h-7" style="color:#22C55E"></i></div>
+            <div>
+              <p class="text-sm" style="color: var(--text-muted)">Location</p>
+              <p class="font-semibold" style="color: var(--text)">Pune, Maharashtra, India</p>
+            </div>
+          </div>
+
+          <div class="flex gap-3 pt-2">
+            <a href="#" class="w-12 h-12 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5" style="color: var(--text)"></i></a>
+            <a href="#" class="w-12 h-12 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5" style="color: var(--text)"></i></a>
+            <a href="#" class="w-12 h-12 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="Behance"><i data-lucide="pen-tool" class="w-5 h-5" style="color: var(--text)"></i></a>
+            <a href="#" class="w-12 h-12 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="Dribbble"><i data-lucide="dribbble" class="w-5 h-5" style="color: var(--text)"></i></a>
+            <a href="#" class="w-12 h-12 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5" style="color: var(--text)"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="reveal-right">
+          <form class="card-premium p-8 space-y-5" onsubmit="handleContactSubmit(event)">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-sm font-semibold mb-2" style="color: var(--text)">Name</label>
+                <input type="text" class="form-input" placeholder="Your name" required>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2" style="color: var(--text)">Email</label>
+                <input type="email" class="form-input" placeholder="you@email.com" required>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2" style="color: var(--text)">Subject</label>
+              <input type="text" class="form-input" placeholder="What's this about?" required>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2" style="color: var(--text)">Message</label>
+              <textarea rows="5" class="form-input resize-none" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary magnetic rounded-xl px-6 py-3.5 text-sm font-semibold inline-flex items-center gap-2 w-full justify-center">
+              Send Message <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+            <p id="formSuccess" class="text-sm text-center hidden" style="color: #22C55E">✓ Thank you! Your message has been sent.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="pt-20 pb-8 px-4 sm:px-6" style="background: var(--bg-alt); border-top: 1px solid var(--border)">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <a href="#hero" class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg" style="background: var(--gradient-2);">S</div>
+            <span class="font-display font-bold text-lg" style="color: var(--text)">Sachin Ade<span style="color:#2563EB">.</span></span>
+          </a>
+          <p class="text-sm max-w-sm mb-6" style="color: var(--text-muted)">Python Full Stack Developer & Data Engineer</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4" style="color: var(--text)"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="GitHub"><i data-lucide="github" class="w-4 h-4" style="color: var(--text)"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="Behance"><i data-lucide="pen-tool" class="w-4 h-4" style="color: var(--text)"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="Dribbble"><i data-lucide="dribbble" class="w-4 h-4" style="color: var(--text)"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB] hover:-translate-y-1" style="border-color: var(--border); background: var(--surface)" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4" style="color: var(--text)"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-sm mb-4" style="color: var(--text)">Navigation</h3>
+          <div class="space-y-2">
+            <a href="#about" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">About</a>
+            <a href="#skills" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">Skills</a>
+            <a href="#projects" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">Projects</a>
+            <a href="#services" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">Services</a>
+            <a href="#contact" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-sm mb-4" style="color: var(--text)">Get in Touch</h3>
+          <div class="space-y-2">
+            <a href="mailto:sachuade45@gmail.com" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">sachuade45@email.com</a>
+            <a href="tel:+919309361205" class="block text-sm hover:text-[#2563EB] transition-colors" style="color: var(--text-muted)">+91-9309361205 </a>
+            <p class="text-sm" style="color: var(--text-muted)">Pune, Maharashtra, India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider mb-6"></div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-sm" style="color: var(--text-muted)">© 2026 Sachin Ade. All rights reserved.</p>
+        <p class="text-sm" style="color: var(--text-muted)">Designed & built with <i data-lucide="heart" class="w-3 h-3 inline" style="color:#2563EB"></i> by Sachin Ade</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== BACK TO TOP ============== -->
+  <button class="back-to-top fixed bottom-8 right-8 z-[6000] w-12 h-12 rounded-xl btn-primary flex items-center justify-center" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- ============== CASE STUDY MODAL ============== -->
+  <div class="modal-overlay" id="caseStudyModal">
+    <div class="modal-content" id="caseStudyContent">
+      <!-- Content will be injected by JS -->
+    </div>
+  </div>
+
+  <!-- ============== SCRIPTS ============== -->
+  <script>
+    // ============== PROJECTS DATA ==============
+    const projects = [
+      {
+        id: 0, title: "Food Delivery App", category: "mobile",
+        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop",
+        role: "Data Analyst", timeline: "3 weeks", tools: ["Python", "SQL", "Power BI"],
+        problem: "Users found existing food delivery apps cluttered with too many options and confusing checkout flows, leading to cart abandonment.",
+        solution: "Redesigned the entire ordering experience with a focus on clarity, speed, and delight. Simplified navigation, streamlined checkout to 3 steps, and added real-time order tracking.",
+        impact: "40% reduction in cart abandonment. 25% increase in order completion rate. 4.8 app store rating.",
+        tags: ["Mobile App", "E-Commerce", "Python"],
+        links: { caseStudy: true, live: "#", prototype: "#", github: "#" }
+      },
+      {
+        id: 1, title: "Hospital Management System", category: "dashboard",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
+        role: "Data Engineer", timeline: "4 weeks", tools: ["Python", "SQL", "Apache Spark"],
+        problem: "Hospital staff juggled multiple disconnected systems for patient records, appointments, and billing, causing inefficiency and errors.",
+        solution: "Designed a unified dashboard with role-based access, patient timeline view, and integrated appointment scheduling. Created a design system for consistency across modules.",
+        impact: "30% faster patient check-in. 50% reduction in data entry errors. Adopted by 3 hospital departments.",
+        tags: ["Dashboard", "Healthcare", "Design System"],
+        links: { caseStudy: true, live: "#", prototype: "#", github: "#" }
+      },
+      {
+        id: 2, title: "Travel Booking App", category: "mobile",
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop",
+        role: "Data Analyst", timeline: "3 weeks", tools: ["Python",  "Pandas"],
+        problem: "Travel booking apps overwhelm users with options and hidden fees, making it hard to make confident decisions.",
+        solution: "Created a clean, card-based interface with transparent pricing, smart filters, and a visual trip planner. Added offline access to bookings.",
+        impact: "35% increase in booking completion. 4.7 user satisfaction score. Featured in design showcase.",
+        tags: ["Mobile App", "Travel", "Booking"],
+        links: { caseStudy: true, live: "#", prototype: "#", github: "#" }
+      },
+    ];
+
+    // ============== RENDER PROJECTS ==============
+    function renderProjects(filter = 'all') {
+      const grid = document.getElementById('projectGrid');
+      const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+      grid.innerHTML = filtered.map((p, i) => `
+        <div class="project-card card-premium overflow-hidden reveal" style="transition-delay: ${i * 0.1}s">
+          <div class="project-thumb m-4 mb-0">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-48 object-cover" loading="lazy">
+            <div class="project-overlay">
+              <div class="flex gap-2">
+                <button onclick="openCaseStudy(${p.id})" class="btn-primary rounded-lg px-4 py-2 text-xs font-semibold inline-flex items-center gap-1.5">
+                  <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Case Study
+                </button>
+                <a href="${p.links.prototype}" class="btn-ghost rounded-lg px-3 py-2 text-xs font-semibold inline-flex items-center gap-1.5" style="color: var(--text)">
+                  <i data-lucide="play" class="w-3.5 h-3.5"></i> Prototype
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              ${p.tags.slice(0, 2).map(t => `<span class="tag">${t}</span>`).join('')}
+            </div>
+            <h3 class="text-lg font-bold mb-2" style="color: var(--text)">${p.title}</h3>
+            <div class="flex items-center gap-3 text-xs mb-4" style="color: var(--text-muted)">
+              <span class="flex items-center gap-1"><i data-lucide="user" class="w-3 h-3"></i> ${p.role}</span>
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> ${p.timeline}</span>
+            </div>
+            <p class="text-sm mb-4 line-clamp-2" style="color: var(--text-muted)">${p.problem}</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              ${p.tools.map(t => `<span class="text-xs px-2 py-1 rounded-md" style="background: var(--bg-alt); color: var(--text-muted)">${t}</span>`).join('')}
+            </div>
+            <div class="flex gap-2">
+              <button onclick="openCaseStudy(${p.id})" class="flex-1 text-sm font-semibold text-center py-2.5 rounded-xl border transition-all hover:border-[#2563EB] hover:text-[#2563EB]" style="border-color: var(--border); color: var(--text)">
+                View Case Study
+              </button>
+              <a href="${p.links.github}" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB]" style="border-color: var(--border); color: var(--text)">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+              <a href="${p.links.live}" class="w-10 h-10 rounded-xl border flex items-center justify-center transition-all hover:border-[#2563EB]" style="border-color: var(--border); color: var(--text)">
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+      observeReveals();
+    }
+
+   
+ 
+    // ============== CUSTOM CURSOR ==============
+    const cursorDot = document.getElementById('cursorDot');
+    const cursorGlow = document.getElementById('cursorGlow');
+    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+    });
+
+    function animateGlow() {
+      glowX += (mouseX - glowX) * 0.15;
+      glowY += (mouseY - glowY) * 0.15;
+      cursorGlow.style.left = glowX + 'px';
+      cursorGlow.style.top = glowY + 'px';
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+
+    document.querySelectorAll('a, button, .skill-chip, .card-premium, input, textarea').forEach(el => {
+      el.addEventListener('mouseenter', () => cursorGlow.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursorGlow.classList.remove('hover'));
+    });
+
+    // ============== THEME TOGGLE ==============
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    function setTheme(dark) {
+      if (dark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    setTheme(savedTheme === 'dark');
+
+    themeToggle.addEventListener('click', () => {
+      setTheme(!document.documentElement.classList.contains('dark'));
+    });
+
+    // ============== SCROLL PROGRESS & NAVBAR ==============
+    const scrollProgress = document.getElementById('scrollProgress');
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / scrollHeight) * 100;
+      scrollProgress.style.width = scrolled + '%';
+
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+        navbar.classList.add('glass');
+      } else {
+        navbar.classList.remove('scrolled');
+        navbar.classList.remove('glass');
+      }
+
+      if (window.scrollY > 600) backToTop.classList.add('show');
+      else backToTop.classList.remove('show');
+    });
+
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ============== MOBILE MENU ==============
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // ============== MAGNETIC BUTTONS ==============
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0)';
+      });
+    });
+
+    // ============== SCROLL REVEAL ==============
+    function observeReveals() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            // Animate skill bars
+            entry.target.querySelectorAll?.('.skill-bar-fill').forEach(bar => {
+              bar.style.width = bar.dataset.width + '%';
+            });
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right').forEach(el => {
+        if (!el.classList.contains('in')) observer.observe(el);
+      });
+    }
+
+    // ============== ANIMATED COUNTERS ==============
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const duration = 2000;
+      const start = performance.now();
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + '+';
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target + '+';
+      }
+      requestAnimationFrame(update);
+    }
+
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+    // ============== TABS ==============
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.color = 'var(--text-muted)';
+          b.style.borderColor = 'var(--border)';
+        });
+        btn.classList.add('active');
+        btn.style.color = '#2563EB';
+        btn.style.borderColor = '#2563EB';
+
+        document.querySelectorAll('.tab-panel').forEach(panel => {
+          panel.classList.remove('active');
+          if (panel.dataset.panel === tab) {
+            panel.classList.add('active');
+            // Re-animate skill bars
+            panel.querySelectorAll('.skill-bar-fill').forEach(bar => {
+              bar.style.width = '0%';
+              setTimeout(() => bar.style.width = bar.dataset.width + '%', 100);
+            });
+          }
+        });
+      });
+    });
+
+    // ============== PROJECT FILTER ==============
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.borderColor = 'var(--border)';
+          b.style.color = 'var(--text-muted)';
+          b.style.background = 'transparent';
+        });
+        btn.classList.add('active');
+        btn.style.borderColor = '#2563EB';
+        btn.style.color = '#2563EB';
+        btn.style.background = 'rgba(37,99,235,0.05)';
+        renderProjects(filter);
+      });
+    });
+
+    
+    // ============== CONTACT FORM ==============
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(() => document.getElementById('formSuccess').classList.add('hidden'), 4000);
+    }
+
+    // ============== SMOOTH SCROLL OFFSET ==============
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ============== PARALLAX ==============
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      document.querySelectorAll('.mesh-blob').forEach((blob, i) => {
+        const speed = 0.03 + i * 0.01;
+        blob.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // ============== INIT ==============
+    renderProjects();
+    observeReveals();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
